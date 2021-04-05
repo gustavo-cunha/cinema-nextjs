@@ -10,7 +10,7 @@ export default function Search() {
 
   async function handleSearch() {
     if (searchText !== '') {
-      const result = await fetch(`http://localhost:3000/api/movie/search?q=${searchText}`);
+      const result = await fetch(`https://cinema-nextjs.vercel.app/api/movie/search?q=${searchText}`);
       const json = await result.json();
       setMovieList(json.list);
     }

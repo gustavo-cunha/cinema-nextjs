@@ -35,7 +35,7 @@ export default function MoveItem({info}) {
 }
 
 export async function getServerSideProps(context) {
-  const result = await fetch(`http://localhost:3000/api/movie/${context.params.id}`);
+  const result = await fetch(`https://cinema-nextjs.vercel.app/api/movie/${context.params.id}`);
   const json = await result.json();
 
   return {
